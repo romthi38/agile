@@ -44,3 +44,9 @@ function exponentielles(n1){
     return Math.exp(n1);
 }
 
+//pourcentage
+function pourcentage(n1,n2){
+    ajouterHistorique(n1+ "* 0." + n2);
+    return n1*+'0.'+n2
+}
+
