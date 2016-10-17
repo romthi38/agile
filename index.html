@@ -4,36 +4,40 @@
     <meta charset="UTF-8">
     <title>Calculatrice web</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./calcul.js"></script>
+    <script src="./interface.js"></script>
 </head>
 <body>         
     <table id="calculatrice">
         <tr>
-            <td><label>Résultat</label><input id="resultat" type="text"></td>
+            <td colspan="3"><input id="resultat" type="text"></td>
         </tr>
         <tr>            
             <td><button id="effacer">CE</button></td>
-            <td><button class="operation" id="pourcentage">%</button></td>            
+            <td><button class="operation" id="pourcentage">%</button></td>
+            <td><button class="operation" id="logarithme">log</button></td>
+            <td><button class="operation" id="exponentielle">exp</button></td>            
         </tr>
         <tr>
-            <td><button id="nb7">7</button></td>
-            <td><button id="nb8">8</button></td>
-            <td><button id="nb9">9</button></td>
+            <td><button class="valeur" id="nb7">7</button></td>
+            <td><button class="valeur" id="nb8">8</button></td>
+            <td><button class="valeur" id="nb9">9</button></td>
             <td><button class="operation" id="soustraction">-</button></td>
         </tr>
         <tr>
-            <td><button id="nb4">4</button></td>
-            <td><button id="nb5">5</button></td>
-            <td><button id="nb6">6</button></td>
+            <td><button class="valeur" id="nb4">4</button></td>
+            <td><button class="valeur" id="nb5">5</button></td>
+            <td><button class="valeur" id="nb6">6</button></td>
             <td><button class="operation" id="multiplication">*</button></td>
         </tr>
         <tr>
-            <td><button id="nb1">1</button></td>
-            <td><button id="nb2">2</button></td>
-            <td><button id="nb3">3</button></td>
+            <td><button class="valeur" id="nb1">1</button></td>
+            <td><button class="valeur" id="nb2">2</button></td>
+            <td><button class="valeur" id="nb3">3</button></td>
             <td><button class="operation" id="division">/</button></td>
         </tr>
         <tr>
-            <td><button id="nb0">0</button></td>
+            <td><button class="valeur" id="nb0">0</button></td>
             <td><button id="virgule">,</button></td>
             <td><button id="egal">=</button></td>
             <td><button class="operation" id="addition">+</button></td>
