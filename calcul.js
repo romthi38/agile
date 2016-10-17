@@ -25,3 +25,22 @@ function multiplier(n1,n2){
     ajouterHistorique(n1 + ' x ' + n2);
     return n1 * n2;
 }
+
+//racine carrée
+function racineCarree(n1){
+    ajouterHistorique('√'+ n1);
+    return Math.sqrt(n1);
+}
+
+//logarithmes
+function logarithmes(n1){
+    ajouterHistorique('log('+ n1 + ')');
+    return Math.log(n1);
+}
+
+//exponentielles
+function exponentielles(n1){
+    ajouterHistorique('exp('+ n1 + ')');
+    return Math.exp(n1);
+}
+
