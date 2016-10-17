@@ -7,11 +7,10 @@ window.onload = function(){
         histo.value = chaine+histo.value;
     }
     
-var button = document.getElementsByClassName("valeur");
-    button.onclick = function(){
+function click_number(){
         var res = document.getElementById("resultat");
         res = res + button.value;
-    }  
+    } 
 }
 
 operateur.onclick = function(){
