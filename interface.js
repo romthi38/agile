@@ -7,7 +7,7 @@ window.onload = function(){
         histo.value = chaine+histo.value;
     }
     
-var button = document.getElementsByTagName("button");
+var button = document.getElementsByClassName("valeur");
     button.onclick = function(){
         var res = document.getElementById("resultat");
         res = res + button.value;
