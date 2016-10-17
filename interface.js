@@ -1,15 +1,5 @@
 var resultat = null, nombre_courant = document.getElementById('resultat');
-var operateur = document.getElementsByClassName('operation'), bt_number = document.getElementsByClassName('valeur');
-
-window.onload = function(){
-    for(var i = 0 ; i < operateur.lenght ; i++){
-        operateur[i].addEventListener('click', click_operation);
-    }
-    
-    for(var i = 0 ; i < bt_number.lenght ; i++){
-        bt_number[i].addEventListener('click', click_number);
-    }
-}
+var operateur = document.getElementsByClassName('operation');
 
 window.onload = function(){
     var histo = document.getElementById("historique"); //fonction permettant d'ajouter à l'historique
@@ -17,34 +7,39 @@ window.onload = function(){
         histo.value = chaine+histo.value;
     }
     
+    var buttonBg = document.getElementsByID("selectBg").value;
+    switch(buttonBg){
+        case "aucun":
+            document.getElementById("calculatrice").style.backgroundColor = "white";
+            break;
+        case "chat":
+            document.getElementById("calculatrice").style.background = "url('http://www.chatsbio.com/wp-content/uploads/2014/07/chat-mignon.jpg')";
+            break;
+        case "pokemeon":
+            document.getElementById("calculatrice").style.background = "url('http://media.melty.fr/article-3206746-fb/pokemon-bebe-pokemon-pre-evolution-pichu.jpg')";
+    }
+    
 function click_number(){
         var res = document.getElementById("resultat");
         res = res + button.value;
-    }  
+    } 
 }
 
-function click_operation(){
+operateur.onclick = function(){
     switch(this.value)
         {
         
-            case "+":
-                resultat = addition(resultat, nombre_courant);
-                break;
-            case "-":
-                resultat = soustraction(resultat, nombre_courant);
-                break;
-            case "x":
-                resultat = multiplier(resultat, nombre_courant);
-                break;
-            case "/":
-                resultat = diviser(resultat, nombre_courant);
-                break;
-            default:
-                return false;
+            case "+"
+                    resultat = addition(resultat, nombre_courant);
+                    break;
+            case "-"
+                    resultat = soustraction(resultat, nombre_courant);
+                    break;
+            case "x"
+                    resultat = multiplier(resultat, nombre_courant);
+                    break;
+            case "/"
+                    resultat = diviser(resultat, nombre_courant);
+                    break;
         }
-    affiche();
-}
-
-function affiche(){
-    nombre_courant.value = resultat;
 }
